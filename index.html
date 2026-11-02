@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher — C Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="brand">
+            <span class="brand-mark">C</span>
+            <span>caesar<span class="red">.</span></span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </div>
+
+        <a href="#project" class="nav-button">Explore project ↗</a>
+    </nav>
+
+    <main>
+
+        <section class="hero" id="overview">
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <span class="dot"></span>
+                    PERSONAL C PROJECT
+                </div>
+
+                <h1>
+                    CAESAR<br>
+                    <span>CIPHER.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A simple password vault built from scratch
+                    using the C programming language.
+                    Inspired by the classic Caesar Cipher algorithm.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#project" class="primary-button">Explore project <span>↘</span></a>
+                    <a href="#about" class="secondary-button">About the project</a>
+                </div>
+
+                <div class="hero-meta">
+                    <div>
+                        <span class="meta-label">LANGUAGE</span>
+                        <span class="meta-value">C</span>
+                    </div>
+                    <div>
+                        <span class="meta-label">TYPE</span>
+                        <span class="meta-value">Cybersecurity</span>
+                    </div>
+                    <div>
+                        <span class="meta-label">STATUS</span>
+                        <span class="meta-value"><span class="status-dot"></span> Completed demo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-card">
+                <div class="code-header">
+                    <div class="window-dots">
+                        <i></i><i></i><i></i>
+                    </div>
+                    <span>encrypt.c</span>
+                    <span class="file-type">C SOURCE</span>
+                </div>
+
+                <div class="code-content">
+                    <p><span class="line">01</span> <span class="purple">#include</span> <span class="green">&lt;stdio.h&gt;</span></p>
+                    <p><span class="line">02</span> <span class="purple">#include</span> <span class="green">&lt;string.h&gt;</span></p>
+                    <p><span class="line">03</span> <span class="purple">#define</span> KEY <span class="orange">3</span></p>
+                    <p class="empty"><span class="line">04</span></p>
+                    <p><span class="line">05</span> <span class="blue">void</span> encrypt(<span class="blue">char</span> *text, <span class="blue">int</span> key) {</p>
+                    <p><span class="line">06</span> &nbsp;&nbsp;<span class="blue">for</span> (<span class="blue">int</span> i = <span class="orange">0</span>; text[i] != <span class="orange">'\0'</span>; i++) {</p>
+                    <p><span class="line">07</span> &nbsp;&nbsp;&nbsp;&nbsp;text[i] += key;</p>
+                    <p><span class="line">08</span> &nbsp;&nbsp;}</p>
+                    <p><span class="line">09</span> }</p>
+                    <p class="empty"><span class="line">10</span></p>
+                    <p><span class="line">11</span> <span class="comment">// Simple. Direct. C.</span></p>
+                </div>
+
+                <div class="code-footer">
+                    <span>● C LANGUAGE</span>
+                    <span>SHIFT: 3</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="project-section" id="project">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">01 / THE PROJECT</span>
+                    <h2>Inside the vault.</h2>
+                </div>
+                <p>A look at what the program actually does.</p>
+            </div>
+
+            <div class="vault-preview">
+                <div class="vault-top">
+                    <div class="vault-title">
+                        <span class="small-lock">▣</span>
+                        <div>
+                            <h3>Password Vault</h3>
+                            <span>Terminal application · C</span>
+                        </div>
+                    </div>
+                    <span class="demo-label">INTERFACE PREVIEW</span>
+                </div>
+
+                <div class="terminal">
+                    <div class="terminal-title">
+                        <span>terminal — caesar_vault</span>
+                        <span>•••</span>
+                    </div>
+
+                    <div class="terminal-body">
+                        <p class="terminal-muted">Welcome to Caesar Cipher Password Vault</p>
+                        <p>Master password: <span class="terminal-green">********</span></p>
+                        <br>
+                        <p class="terminal-muted">Choose an option:</p>
+                        <p><span class="terminal-red">1</span> = Add password</p>
+                        <p><span class="terminal-red">2</span> = Show passwords</p>
+                        <p><span class="terminal-red">3</span> = Exit</p>
+                        <br>
+                        <p>Choose: <span class="terminal-green">1</span></p>
+                        <p>Name: <span class="terminal-green">github</span></p>
+                        <p>Password: <span class="terminal-green">********</span></p>
+                        <p class="terminal-success">Password added successfully.</p>
+                        <br>
+                        <p class="cursor-line">_</p>
+                    </div>
+                </div>
+
+                <div class="vault-note">
+                    <span>↳</span>
+                    A visual representation of the program's terminal workflow.
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section" id="features">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">02 / FUNCTIONALITY</span>
+                    <h2>What it can do.</h2>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature">
+                    <span class="feature-number">01</span>
+                    <h3>Master Password</h3>
+                    <p>A master password is required before accessing the vault.</p>
+                </article>
+
+                <article class="feature">
+                    <span class="feature-number">02</span>
+                    <h3>Caesar Cipher</h3>
+                    <p>Characters are shifted using a configurable integer key.</p>
+                </article>
+
+                <article class="feature">
+                    <span class="feature-number">03</span>
+                    <h3>File Storage</h3>
+                    <p>Credentials are saved to a local text file and loaded when the program starts.</p>
+                </article>
+
+                <article class="feature">
+                    <span class="feature-number">04</span>
+                    <h3>Password Management</h3>
+                    <p>Add and display stored credentials through a simple menu.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-left">
+                <span class="section-label">03 / ABOUT</span>
+                <h2>Learning by<br>building things.</h2>
+            </div>
+
+            <div class="about-right">
+                <p>
+                    This project was created to explore the fundamentals
+                    of programming in C. It combines structures, arrays,
+                    functions, pointers and file handling in one small application.
+                </p>
+                <p>
+                    The main goal was to understand how data is stored,
+                    modified, encrypted and retrieved at a low level.
+                </p>
+
+                <div class="tech-list">
+                    <span>C</span>
+                    <span>Structs</span>
+                    <span>Pointers</span>
+                    <span>File I/O</span>
+                    <span>Encryption Basics</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#" class="brand">
+            <span class="brand-mark">C</span>
+            <span>caesar<span class="red">.</span></span>
+        </a>
+
+        <span>Built with C. Made to learn.</span>
+        <span>© 2026 Caesar Cipher</span>
+    </footer>
+
+</body>
+</html>
