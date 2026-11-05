@@ -37,7 +37,7 @@ int main(void){
             show_passwords();
         }
         else if(choice == 3){
-            save_passwords();     // 🆕 պահում ենք դուրս գալուց
+            save_passwords();     
             break;
         }
         else{
@@ -63,8 +63,8 @@ void show_passwords(){
 void save_passwords(){
     FILE *file = fopen("password.txt", "w");
     for(int i = 0; i < count; ++i){
-        encrypt(vault[i].name, KEY);         // 🆕 ծպտում ենք նախքան գրելը
-        encrypt(vault[i].password, KEY);     // 🆕
+        encrypt(vault[i].name, KEY);         
+        encrypt(vault[i].password, KEY);    
         fprintf(file, "%s %s\n", vault[i].name, vault[i].password);
     }
     fclose(file);
@@ -76,8 +76,8 @@ void load_passwords(){
         return;
     }
     while(fscanf(file, "%s %s", vault[count].name, vault[count].password) == 2){
-        encrypt(vault[count].name, -KEY);        // 🆕 վերծանում ենք կարդալուց հետո
-        encrypt(vault[count].password, -KEY);    // 🆕
+        encrypt(vault[count].name, -KEY);       
+        encrypt(vault[count].password, -KEY);    
         count++;
     }
     fclose(file);
